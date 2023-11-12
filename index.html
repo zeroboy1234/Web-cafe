@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="top__header">
+                <div class="top__header--title">
+                    GIAO HÀNG TOÀN QUỐC
+                </div>
+            </div>
+            <div class="container__header">
+                <div class="container__header__child">
+                    <div class="container__header--menu">
+                        <div class="menu-content">
+                            <div class="menu-icon">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                            <div class="menu-text">
+                                MENU
+                            </div>
+                        </div>       
+                    </div>
+                    <div class="container__header--logo">
+                        <div class="logo-content">
+                            <img src="assets/image/logo.png" class="image-cafe" alt="">
+                        </div>
+                    </div>
+                    <div class="container__header--search">
+                        <div class="search-bar">
+                            <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm...">
+                            <button class="search-button">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="container__header--account">
+                        <div class="account-content" onclick="toggleModal()">
+                            <div class="account-icon">
+                                <i class="fa-regular fa-user"></i>
+                            </div>
+                            <div class="account-text">
+                                Tài khoản
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="container__header--cart">
+                        <div class="cart-content">
+                            <div class="cart-icon">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                            <div class="cart-text">
+                                Giỏ hàng
+                            </div>
+                            <div class="cart-list">
+                                <img src="/assets/image/no-cart.png" alt="" class="no-cart-img">
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+
+        <div class="container">
+
+        </div>
+
+        <footer class="footer">
+
+        </footer>
+    </div>
+    
+    <div class="modal">
+        <div class="modal__overlay">
+
+        </div>
+        <div class="modal__body">
+            <div class="modal__inner">
+                <!-- Signup form -->
+                <div class="signup-form active-form">
+                    <div class="signup-form__container">
+                        <div class="sl-form__header">
+                            <span class="signup-btn active-btn" onclick="switchForm('signup')">
+                                Đăng ký
+                            </span>
+                            <span class="login-btn inactive-btn" onclick="switchForm('login')">
+                                Đăng nhập
+                            </span>
+                        </div> 
+                        
+                        <div class="signup-form__form">
+                            <div class="signup-form__group">
+                                <input type="text" class="signup-form__input" placeholder="Email của bạn">
+                            </div>
+                            <div class="signup-form__group">
+                                <input type="password" class="signup-form__input" placeholder="Mật khẩu của bạn">
+                            </div>
+                            <div class="signup-form__group">
+                                <input type="password" class="signup-form__input" placeholder="Nhập lại mật khẩu của bạn">
+                            </div>
+                        </div>
+    
+                        <div class="signup-form__aside">
+                            <p class="signup-form__policy-text">
+                                Bằng việc đăng ký, bạn đã đồng ý với Highlands Coffee 
+                                <a href="" class="signup-form__policy-link">Điều khoản và dịch vụ</a>&
+                                <a href="" class="signup-form__policy-link">Chính sách bảo mật</a>
+                            </p>
+                        </div>
+                        <div class="sl-form__controls">
+                            <button class="btn btn-back">TRỞ LẠI</button>
+                            <button class="btn btn-sl">ĐĂNG KÝ</button>
+                        </div>
+                    </div>
+
+                    <div class="sl-form__socials">
+                        <a href="" class="btn-facebook">
+                            <img src="assets/image/facebook.png" alt="" class="fa-facebook">
+                            Kết nối với Facebook
+                        </a>
+                        <a href="" class="btn-google">
+                            <img src="assets/image/google.png" alt="" class="fa-google">
+                            Kết nối với Google
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Login form -->
+                <div class="login-form inactive-form">
+                    <div class="login-form__container">
+                        <div class="sl-form__header"> 
+                            <span class="signup-btn inactive-btn" onclick="switchForm('signup')">
+                                Đăng ký
+                            </span>
+                            <span class="login-btn active-btn" onclick="switchForm('login')">
+                                Đăng nhập
+                            </span>
+                        </div> 
+                        
+                        <div class="login-form__form">
+                            <div class="login-form__group">
+                                <input type="text" class="login-form__input" placeholder="Email của bạn">
+                            </div>
+                            <div class="login-form__group">
+                                <input type="password" class="login-form__input" placeholder="Mật khẩu của bạn">
+                            </div>
+                        </div>
+    
+                        <div class="login-form__aside">
+                            <div class="login-form__help">
+                                <a href="" class="login-form__help-link login-form__help-forgot">Quên mật khẩu</a>
+                                <span class="login-form__help-separate">
+
+                                </span>
+                                <a href="" class="login-form__help-link">Cần trợ giúp?</a>
+                            </div>
+                        </div>
+                        <div class="sl-form__controls">
+                            <button class="btn btn-back">TRỞ LẠI</button>
+                            <button class="btn btn-sl">ĐĂNG NHẬP</button>
+                        </div>
+                    </div>
+
+                    <div class="sl-form__socials">
+                        <a href="" class="btn-facebook">
+                            <img src="assets/image/facebook.png" alt="" class="fa-facebook">
+                            Đăng nhập với Facebook
+                        </a>
+                        <a href="" class="btn-google">
+                            <img src="assets/image/google.png" alt="" class="fa-google">
+                            Đăng nhập với Google
+                        </a>
+                    </div>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
